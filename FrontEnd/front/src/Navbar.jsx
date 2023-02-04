@@ -2,8 +2,8 @@ import "./App.css";
 
 const Navbar = () => {
   return (
-    <div>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div className="fixed-top">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
         <div class="container-fluid">
           <a class="navbar-brand" href="/">
             OneClick
@@ -53,6 +53,11 @@ const Navbar = () => {
                     </a>
                   </li>
                 </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/cart">
+                  <i class="fa-solid fa-cart-shopping">Cart</i>
+                </a>
               </li>
             </ul>
             <form class="d-flex" role="search">

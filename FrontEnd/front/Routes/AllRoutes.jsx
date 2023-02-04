@@ -9,6 +9,8 @@ import Women from "../src/Women";
 import Kids from "../src/Kids";
 import Tshirt from "../src/Tshirt";
 import Watch from "../src/Watch";
+import Cart from "../src/Cart";
+import Product from "../src/Product";
 const MainRoute = () => {
   return (
     <div>
@@ -17,28 +19,34 @@ const MainRoute = () => {
           Home
         </Route>
         <Route path="/register" element={<Register />}>
-          Home
+          Register
         </Route>
         <Route path="/login" element={<Login />}>
-          Home
+          Login
         </Route>
         <Route path="/glasses" element={<Glasses />}>
-          Home
+          Glass
         </Route>
         <Route path="/kids" element={<Kids />}>
-          Home
+          Kids
         </Route>
         <Route path="/men" element={<Men />}>
-          Home
+          Men
         </Route>
         <Route path="/women" element={<Women />}>
-          Home
+          Women
         </Route>
         <Route path="/watch" element={<Watch />}>
-          Home
+          Watch
         </Route>
         <Route path="/tshirt" element={<Tshirt />}>
-          Home
+          Tshirt
+        </Route>
+        <Route path="/cart" element={<Cart />}>
+          Cart
+        </Route>
+        <Route path="/product" element={<Product />}>
+          Product
         </Route>
       </Routes>
     </div>

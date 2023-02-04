@@ -1,7 +1,8 @@
+
 .heading{
     color: gray;
    font-style: italic;
-   
+   margin-top: 15%;
    text-decoration: underline;
 }
 .nav1{
@@ -20,3 +21,67 @@ img:hover{
     gap: 20px;
    margin-top: 2%;
 }
+li{
+    transition: 400ms;
+}
+li:hover{
+    transform: scale(1.1);
+}
+.product_img img{
+    width: 60%;
+}
+.product_img{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 30px;
+    margin-top: 110px;
+    
+}
+
+.product_div{
+    cursor: grabbing;
+}
+.price{
+    text-decoration: line-through;
+    color: red;
+}
+.price1{
+    color: green;
+}
+span{
+    font-weight: bold;
+    font-size: small;
+}
+.product_div h5{
+    color: rgb(97, 96, 96);
+    font-weight: 700;
+    font-style: italic;
+    margin-top: 1%;
+    
+}
+.product_div img{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+@media (max-width: 500px) {
+    .product_img{
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 30px;
+    }
+  }
+  @media (min-width: 500px) and (max-width: 940px) {
+    .product_img{
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 30px;
+    }
+  }  
