@@ -69,6 +69,26 @@ server.get("/user", async (req, res) => {
     res.send(error);
   }
 });
+server.get("/user/:id", async (req, res) => {
+  const ID = req.params.id;
+  try {
+    const data = await RegisterModel.find({ _id: ID });
+    res.send(data);
+  } catch (error) {
+    console.log(error);
+    res.send(error);
+  }
+});
+server.delete("/user/:id", async (req, res) => {
+  const ID = req.params.id;
+  try {
+    const data = await RegisterModel.findByIdAndDelete({ _id: ID });
+    res.send(data);
+  } catch (error) {
+    console.log(error);
+    res.send(error);
+  }
+});
 server.post("/post/glass", async (req, res) => {
   const data = req.body;
   try {
@@ -82,6 +102,26 @@ server.post("/post/glass", async (req, res) => {
 server.get("/glass", async (req, res) => {
   try {
     const data = await GlassModel.find();
+    res.send(data);
+  } catch (error) {
+    console.log(error);
+    res.send(error);
+  }
+});
+server.get("/glass/:id", async (req, res) => {
+  const ID = req.params.id;
+  try {
+    const data = await GlassModel.find({ _id: ID });
+    res.send(data);
+  } catch (error) {
+    console.log(error);
+    res.send(error);
+  }
+});
+server.delete("/glass/:id", async (req, res) => {
+  const ID = req.params.id;
+  try {
+    const data = await GlassModel.findByIdAndDelete({ _id: ID });
     res.send(data);
   } catch (error) {
     console.log(error);
@@ -107,6 +147,26 @@ server.get("/kids", async (req, res) => {
     res.send(error);
   }
 });
+server.get("/kids/:id", async (req, res) => {
+  const ID = req.params.id;
+  try {
+    const data = await KidsModel.find({ _id: ID });
+    res.send(data);
+  } catch (error) {
+    console.log(error);
+    res.send(error);
+  }
+});
+server.delete("/kids/:id", async (req, res) => {
+  const ID = req.params.id;
+  try {
+    const data = await KidsModel.findByIdAndDelete({ _id: ID });
+    res.send(data);
+  } catch (error) {
+    console.log(error);
+    res.send(error);
+  }
+});
 server.post("/post/men", async (req, res) => {
   const data = req.body;
   try {
@@ -120,6 +180,26 @@ server.post("/post/men", async (req, res) => {
 server.get("/men", async (req, res) => {
   try {
     const data = await MenModel.find();
+    res.send(data);
+  } catch (error) {
+    console.log(error);
+    res.send(error);
+  }
+});
+server.get("/men/:id", async (req, res) => {
+  const ID = req.params.id;
+  try {
+    const data = await MenModel.find({ _id: ID });
+    res.send(data);
+  } catch (error) {
+    console.log(error);
+    res.send(error);
+  }
+});
+server.delete("/men/:id", async (req, res) => {
+  const ID = req.params.id;
+  try {
+    const data = await MenModel.findByIdAndDelete({ _id: ID });
     res.send(data);
   } catch (error) {
     console.log(error);
@@ -145,6 +225,26 @@ server.get("/tshirt", async (req, res) => {
     res.send(error);
   }
 });
+server.get("/tshirt/:id", async (req, res) => {
+  const ID = req.params.id;
+  try {
+    const data = await TshirtModel.find({ _id: ID });
+    res.send(data);
+  } catch (error) {
+    console.log(error);
+    res.send(error);
+  }
+});
+server.delete("/tshirt/:id", async (req, res) => {
+  const ID = req.params.id;
+  try {
+    const data = await TshirtModel.findByIdAndDelete({ _id: ID });
+    res.send(data);
+  } catch (error) {
+    console.log(error);
+    res.send(error);
+  }
+});
 server.post("/post/watch", async (req, res) => {
   const data = req.body;
   try {
@@ -164,6 +264,26 @@ server.get("/watch", async (req, res) => {
     res.send(error);
   }
 });
+server.get("/watch/:id", async (req, res) => {
+  const ID = req.params.id;
+  try {
+    const data = await WatchModel.find({ _id: ID });
+    res.send(data);
+  } catch (error) {
+    console.log(error);
+    res.send(error);
+  }
+});
+server.delete("/watch/:id", async (req, res) => {
+  const ID = req.params.id;
+  try {
+    const data = await WatchModel.findByIdAndDelete({ _id: ID });
+    res.send(data);
+  } catch (error) {
+    console.log(error);
+    res.send(error);
+  }
+});
 server.post("/post/women", async (req, res) => {
   const data = req.body;
   try {
@@ -177,6 +297,26 @@ server.post("/post/women", async (req, res) => {
 server.get("/women", async (req, res) => {
   try {
     const data = await WomenModel.find();
+    res.send(data);
+  } catch (error) {
+    console.log(error);
+    res.send(error);
+  }
+});
+server.get("/women/:id", async (req, res) => {
+  const ID = req.params.id;
+  try {
+    const data = await WomenModel.find({ _id: ID });
+    res.send(data);
+  } catch (error) {
+    console.log(error);
+    res.send(error);
+  }
+});
+server.delete("/women/:id", async (req, res) => {
+  const ID = req.params.id;
+  try {
+    const data = await WomenModel.findByIdAndDelete({ _id: ID });
     res.send(data);
   } catch (error) {
     console.log(error);
