@@ -10,7 +10,12 @@ import Kids from "../src/Kids";
 import Tshirt from "../src/Tshirt";
 import Watch from "../src/Watch";
 import Cart from "../src/Cart";
-import Product from "../src/Product";
+import MenProduct from "../src/MenProduct";
+import TshirtProduct from "../src/TshirtProduct";
+import WatchProduct from "../src/WatchProduct";
+import WomenProduct from "../src/WomenProduct";
+import GlassProduct from "../src/GlassProduct";
+import KidsProduct from "../src/KidsProduct";
 const MainRoute = () => {
   return (
     <div>
@@ -45,8 +50,23 @@ const MainRoute = () => {
         <Route path="/cart" element={<Cart />}>
           Cart
         </Route>
-        <Route path="/product" element={<Product />}>
-          Product
+        <Route path="/men/product/:id" element={<MenProduct />}>
+          MenProduct
+        </Route>
+        <Route path="/women/product/:id" element={<WomenProduct />}>
+          WomenProduct
+        </Route>
+        <Route path="/tshirt/product/:id" element={<TshirtProduct />}>
+          TshirtProduct
+        </Route>
+        <Route path="/kids/product/:id" element={<KidsProduct />}>
+          kidsProduct
+        </Route>
+        <Route path="/glasses/product/:id" element={<GlassProduct />}>
+          GlassProduct
+        </Route>
+        <Route path="/watch/product/:id" element={<WatchProduct />}>
+          WatchProduct
         </Route>
       </Routes>
     </div>

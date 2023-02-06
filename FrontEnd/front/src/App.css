@@ -1,4 +1,15 @@
-
+.productPage{
+  text-align: center;
+   margin-top: 18%;
+}
+.productPage img{
+    width: 30%;
+}
+.text{
+   
+    text-decoration: none;
+    color: black;
+}
 .heading{
     color: gray;
    font-style: italic;
