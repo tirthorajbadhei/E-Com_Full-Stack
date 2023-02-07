@@ -16,6 +16,7 @@ import WatchProduct from "../src/WatchProduct";
 import WomenProduct from "../src/WomenProduct";
 import GlassProduct from "../src/GlassProduct";
 import KidsProduct from "../src/KidsProduct";
+import CheckOut from "../src/CheckOut";
 const MainRoute = () => {
   return (
     <div>
@@ -49,6 +50,9 @@ const MainRoute = () => {
         </Route>
         <Route path="/cart" element={<Cart />}>
           Cart
+        </Route>
+        <Route path="/checkout" element={<CheckOut />}>
+          checkout
         </Route>
         <Route path="/men/product/:id" element={<MenProduct />}>
           MenProduct
