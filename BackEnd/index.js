@@ -8,6 +8,7 @@ const { MenModel } = require("./models/men.model");
 const { TshirtModel } = require("./models/tshirt.model");
 const { WatchModel } = require("./models/watch.model");
 const { WomenModel } = require("./models/women.model");
+const { CartModel } = require("./models/cart.model");
 const jwt = require("jsonwebtoken");
 const cors = require("cors");
 const server = express();
@@ -83,6 +84,35 @@ server.delete("/user/:id", async (req, res) => {
   const ID = req.params.id;
   try {
     const data = await RegisterModel.findByIdAndDelete({ _id: ID });
+    res.send(data);
+  } catch (error) {
+    console.log(error);
+    res.send(error);
+  }
+});
+server.get("/cart", async (req, res) => {
+  try {
+    const data = await CartModel.find();
+    res.send(data);
+  } catch (error) {
+    console.log(error);
+    res.send(error);
+  }
+});
+server.post("/post/cart", async (req, res) => {
+  const data = req.body;
+  try {
+    await CartModel.insertMany(data);
+
+    res.send("data has been sent");
+  } catch (error) {
+    res.send("error");
+  }
+});
+server.delete("/cart/:id", async (req, res) => {
+  const ID = req.params.id;
+  try {
+    const data = await CartModel.findByIdAndDelete({ _id: ID });
     res.send(data);
   } catch (error) {
     console.log(error);
