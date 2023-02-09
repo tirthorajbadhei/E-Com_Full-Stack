@@ -1,3 +1,4 @@
+import "./App.css";
 const Login = () => {
   return <div>Login</div>;
 };

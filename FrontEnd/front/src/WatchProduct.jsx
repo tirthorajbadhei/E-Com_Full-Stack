@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import Aos from "aos";
+import "./App.css";
 import "aos/dist/aos.css";
 import { useState, useEffect } from "react";
 const WatchProduct = () => {
@@ -13,8 +14,29 @@ const WatchProduct = () => {
   const handleReduce = () => {
     setCount((prev) => prev - 1);
   };
-  const handleCart = () => {
-    alert("product added to the Cart");
+  const handleCart = async (
+    img_responsive,
+    product_brand,
+    product_name,
+    product_size,
+    product_strike
+  ) => {
+    const payload = {
+      img_responsive,
+      product_brand,
+      product_name,
+      product_size,
+      product_strike,
+    };
+    try {
+      await axios.post(
+        `https://long-blue-antelope-slip.cyclic.app/post/cart`,
+        payload
+      );
+      alert("product added to the Cart");
+    } catch (error) {
+      console.log(error);
+    }
   };
   useEffect(() => {
     Aos.init({ duration: 1200 });
@@ -53,7 +75,15 @@ const WatchProduct = () => {
             </span>
             <br />
             <button
-              onClick={handleCart}
+              onClick={() =>
+                handleCart(
+                  r.img_responsive,
+                  r.product_brand,
+                  r.product_name,
+                  r.product_size,
+                  r.product_strike
+                )
+              }
               style={{
                 border: "none",
                 color: "white",
