@@ -33,7 +33,6 @@ const MenProduct = () => {
         `https://long-blue-antelope-slip.cyclic.app/post/cart`,
         payload
       );
-      alert("product added to the Cart");
     } catch (error) {
       console.log(error);
     }
@@ -47,6 +46,46 @@ const MenProduct = () => {
   }, [id]);
   return (
     <div>
+      <div
+        class="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">
+                Hurray! Your Item Added to Cart!
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              now you can see your item in the cart page!
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <a href="/cart">
+                <button type="button" class="btn btn-primary">
+                  Go To Cart
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
       {user.map((r) => {
         return (
           <div
@@ -75,6 +114,8 @@ const MenProduct = () => {
             </span>
             <br />
             <button
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
               onClick={() =>
                 handleCart(
                   r.img_responsive,

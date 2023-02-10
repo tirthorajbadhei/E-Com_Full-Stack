@@ -14,7 +14,6 @@ const Cart = () => {
       await axios.delete(
         `https://long-blue-antelope-slip.cyclic.app/cart/${id}`
       );
-      alert("item removed from cart");
     } catch (error) {
       console.log(error);
     }
@@ -25,6 +24,46 @@ const Cart = () => {
     .catch((e) => console.log(e));
   return (
     <div className="cartdiv .container-fluid text-center">
+      <div
+        class="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">
+                Your Item Has Been Removed!
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              your item has been removed from the cart page!
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <a href="/">
+                <button type="button" class="btn btn-primary">
+                  Add Something New
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
       {cart.map((r) => {
         return (
           <div data-aos="flip-right" className="col cartDIV" key={r._id}>
@@ -35,6 +74,8 @@ const Cart = () => {
             <span> {r.product_strike}</span>
             <br />
             <button
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
               onClick={() => handleRemove(r._id)}
               style={{
                 border: "none",
