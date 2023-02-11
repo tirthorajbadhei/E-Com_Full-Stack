@@ -3,13 +3,13 @@ import "./App.css";
 const Navbar = () => {
   return (
     <div className="fixed-top">
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="/">
+      <nav className="navbar navbar-expand-lg navbar-dark bg-dark ">
+        <div className="container-fluid">
+          <a className="navbar-brand" href="/">
             OneClick
           </a>
           <button
-            class="navbar-toggler"
+            className="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent"
@@ -17,23 +17,23 @@ const Navbar = () => {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav1">
-              <li class="nav-item">
-                <a class="nav-link" href="/register">
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul className="navbar-nav me-auto mb-2 mb-lg-0 nav1">
+              <li className="nav-item">
+                <a className="nav-link" href="/register">
                   Register
                 </a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/login">
+              <li className="nav-item">
+                <a className="nav-link" href="/login">
                   Login
                 </a>
               </li>
-              <li class="nav-item dropdown">
+              <li className="nav-item dropdown">
                 <a
-                  class="nav-link dropdown-toggle"
+                  className="nav-link dropdown-toggle"
                   href="#"
                   role="button"
                   data-bs-toggle="dropdown"
@@ -41,38 +41,38 @@ const Navbar = () => {
                 >
                   Category
                 </a>
-                <ul class="dropdown-menu">
+                <ul className="dropdown-menu">
                   <li>
-                    <a class="dropdown-item" href="/men">
+                    <a className="dropdown-item" href="/men">
                       Men
                     </a>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="/women">
+                    <a className="dropdown-item" href="/women">
                       Women
                     </a>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="/kids">
+                    <a className="dropdown-item" href="/kids">
                       Kids
                     </a>
                   </li>
                 </ul>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/cart">
-                  <i class="fa-solid fa-cart-shopping">Cart</i>
+              <li className="nav-item">
+                <a className="nav-link" href="/cart">
+                  <i className="fa-solid fa-cart-shopping">Cart</i>
                 </a>
               </li>
             </ul>
-            <form class="d-flex" role="search">
+            <form className="d-flex" role="search">
               <input
-                class="form-control me-2"
+                className="form-control me-2"
                 type="search"
                 placeholder="Search"
                 aria-label="Search"
               />
-              <button class="btn btn-outline-success" type="submit">
+              <button className="btn btn-outline-success" type="submit">
                 Search
               </button>
             </form>

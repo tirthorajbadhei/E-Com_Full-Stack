@@ -8,17 +8,17 @@ const Home = () => {
   }, []);
   return (
     <div>
-      <div class="container text-center" data-aos="slide-down">
-        <div class="row">
-          <div class="col">
+      <div className="container text-center" data-aos="slide-down">
+        <div className="row">
+          <div className="col">
             <h1 className="heading">Category</h1>
           </div>
         </div>
       </div>
       <br />
-      <div class="container-fluid text-center homeDiv">
-        <div class="row">
-          <div class="col-sm" data-aos="slide-right">
+      <div className="container-fluid text-center homeDiv">
+        <div className="row">
+          <div className="col-sm" data-aos="slide-right">
             <div>
               <a href="/men">
                 <img
@@ -31,7 +31,7 @@ const Home = () => {
               <h1>Men's Suits</h1>
             </div>
           </div>
-          <div class="col-sm" data-aos="slide-left">
+          <div className="col-sm" data-aos="slide-left">
             <div>
               <a href="/women">
                 <img
@@ -47,17 +47,17 @@ const Home = () => {
         </div>
       </div>
       <br />
-      <div class="container text-center" data-aos="slide-down">
-        <div class="row">
-          <div class="col">
+      <div className="container text-center" data-aos="slide-down">
+        <div className="row">
+          <div className="col">
             <h1 className="heading">New Trend</h1>
           </div>
         </div>
       </div>
       <br />
-      <div class="container-fluid text-center homeDiv">
-        <div class="row">
-          <div class="col-sm" data-aos="slide-up">
+      <div className="container-fluid text-center homeDiv">
+        <div className="row">
+          <div className="col-sm" data-aos="slide-up">
             <div>
               <a href="/tshirt">
                 {" "}
@@ -71,7 +71,7 @@ const Home = () => {
               <h1>T-shirt</h1>
             </div>
           </div>
-          <div class="col-sm" data-aos="slide-up">
+          <div className="col-sm" data-aos="slide-up">
             <div>
               <a href="/kids">
                 <img
@@ -87,17 +87,17 @@ const Home = () => {
         </div>
       </div>
       <br />
-      <div class="container text-center" data-aos="slide-down">
-        <div class="row">
-          <div class="col">
+      <div className="container text-center" data-aos="slide-down">
+        <div className="row">
+          <div className="col">
             <h1 className="heading">Accessories</h1>
           </div>
         </div>
       </div>
       <br />
-      <div class="container-fluid text-center homeDiv">
-        <div class="row">
-          <div class="col-sm" data-aos="slide-up">
+      <div className="container-fluid text-center homeDiv">
+        <div className="row">
+          <div className="col-sm" data-aos="slide-up">
             <div>
               <a href="/glasses">
                 <img
@@ -110,7 +110,7 @@ const Home = () => {
               <h1>Glasses</h1>
             </div>
           </div>
-          <div class="col-sm" data-aos="slide-up">
+          <div className="col-sm" data-aos="slide-up">
             <div>
               <a href="/watch">
                 <img
