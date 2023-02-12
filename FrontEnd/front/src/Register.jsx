@@ -33,7 +33,7 @@ const Register = () => {
       <div
         className="modal fade"
         id="exampleModal"
-        tabindex="-1"
+        tabIndex="-1"
         aria-labelledby="exampleModalLabel"
         aria-hidden="true"
       >
@@ -129,7 +129,7 @@ const Register = () => {
             type="submit"
             className="btn btn-primary"
           >
-            Submit
+            Register
           </button>
         </form>
       </div>
