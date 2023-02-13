@@ -5,7 +5,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 const Cart = () => {
   const [cart, setCart] = useState([]);
-  const [remove, setRemove] = useState([]);
+
   useEffect(() => {
     Aos.init({ duration: 1500 });
   }, []);

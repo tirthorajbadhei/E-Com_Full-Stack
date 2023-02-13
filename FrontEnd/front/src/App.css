@@ -2,6 +2,43 @@
   text-align: center;
    margin-top: 18%;
 }
+.admin{
+    margin-top: 14%;
+  
+   
+}
+.checkout{
+    width: 50%;
+    margin-left: 35%;
+   
+
+}
+.checkout input{
+    transition: 700ms;
+    display: flex;
+    width: 60%;
+    text-align: center;
+    margin-top: 1%;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.checkout input:hover{
+   transform: scale(1.1);
+}
+.checkout button{
+    width: 20%;
+    text-align: center;
+    margin-top: 1%;
+    margin-left: 20%;
+}
+#PaymentForm{
+    margin-top: 15%;
+    text-align: center;
+}
+
+.usersdetail{
+    border: 1px solid #212529;
+}
 .cartdiv{
     display: flex;
     flex-direction: column;
@@ -29,6 +66,11 @@ button:hover{
     text-decoration: none;
     color: black;
 }
+.adminhead{
+    background-color: #212529;
+    color: white;
+    
+}
 .heading{
     color: gray;
    font-style: italic;
@@ -36,7 +78,7 @@ button:hover{
    text-decoration: underline;
 }
 .nav1{
-    margin-left: 60%;
+    margin-left: 55%;
 }
 
 img{

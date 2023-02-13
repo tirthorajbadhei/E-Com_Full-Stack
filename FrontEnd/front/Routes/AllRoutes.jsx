@@ -1,5 +1,7 @@
 import { Routes, Route } from "react-router-dom";
-
+import Admin from "../src/Admin";
+import PrivateRoute from "./PrivateRoute";
+import AdminLogin from "../src/AdminLogin";
 import Home from "../src/Home";
 import Register from "../src/Register";
 import Login from "../src/Login";
@@ -17,12 +19,26 @@ import WomenProduct from "../src/WomenProduct";
 import GlassProduct from "../src/GlassProduct";
 import KidsProduct from "../src/KidsProduct";
 import CheckOut from "../src/CheckOut";
+import Validation from "../src/Validation";
 const MainRoute = () => {
   return (
     <div>
       <Routes>
         <Route path="/" element={<Home />}>
           Home
+        </Route>
+        <Route
+          path="/admin"
+          element={
+            <PrivateRoute>
+              <Admin />
+            </PrivateRoute>
+          }
+        >
+          Admin
+        </Route>
+        <Route path="/admin/login" element={<AdminLogin />}>
+          Admin Login
         </Route>
         <Route path="/register" element={<Register />}>
           Register
@@ -71,6 +87,9 @@ const MainRoute = () => {
         </Route>
         <Route path="/watch/product/:id" element={<WatchProduct />}>
           WatchProduct
+        </Route>
+        <Route path="/validation" element={<Validation />}>
+          Validation
         </Route>
       </Routes>
     </div>
