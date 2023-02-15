@@ -49,7 +49,7 @@ const MenProduct = () => {
       <div
         className="modal fade"
         id="exampleModal"
-        tabindex="-1"
+        tabIndex="-1"
         aria-labelledby="exampleModalLabel"
         aria-hidden="true"
       >
@@ -135,7 +135,7 @@ const MenProduct = () => {
               Add to Cart
             </button>
             <span> </span>
-            <a href="/checkout">
+            <a href="/validation">
               <button
                 style={{
                   border: "none",

@@ -1,17 +1,27 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
+import Loading from "./Loading";
 import "./App.css";
 import Aos from "aos";
 import "aos/dist/aos.css";
 const Tshirt = () => {
   const [product, setProduct] = useState([]);
+  const [load, setLoad] = useState(true);
   useEffect(() => {
     Aos.init({ duration: 1000 });
-    axios
-      .get("https://long-blue-antelope-slip.cyclic.app/tshirt")
-      .then((r) => setProduct(r.data))
-      .catch((e) => console.log(e));
+    const getData = async () => {
+      setLoad(true);
+      await axios
+        .get("https://long-blue-antelope-slip.cyclic.app/tshirt")
+        .then((r) => setProduct(r.data))
+        .catch((e) => console.log(e));
+      setLoad(false);
+    };
+    getData();
   }, []);
+  if (load) {
+    return <Loading />;
+  }
   return (
     <div className="product_img">
       {product.map((r) => {

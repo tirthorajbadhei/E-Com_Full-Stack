@@ -87,7 +87,7 @@ const Cart = () => {
               Remove
             </button>
             <span> </span>
-            <a href="/checkout">
+            <a href="/validation">
               <button
                 style={{
                   border: "none",
