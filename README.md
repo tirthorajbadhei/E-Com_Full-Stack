@@ -7,7 +7,24 @@ it is an self designed e-commerce full-stack user friendly website.
 ## Demo
 
 
+## Run project
 
+To Run this project in FrontEnd
+
+```npm
+   - npm install
+
+   - npm run dev
+```
+To Run this project in BackEnd
+
+```npm
+   - npm install
+
+   - npm run server 
+   
+   # you need to set default server as nodemon in package.json
+```
 
 ## API Reference
 
@@ -33,24 +50,7 @@ it is an self designed e-commerce full-stack user friendly website.
 
 
 
-## Run project
 
-To Run this project in FrontEnd
-
-```npm
-   - npm install
-
-   - npm run dev
-```
-To Run this project in BackEnd
-
-```npm
-   - npm install
-
-   - npm run server 
-   
-   # you need to set default server as nodemon in package.json
-```
 
 
 ## API_KEY
